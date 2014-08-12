@@ -6,8 +6,6 @@ import android.view.ViewStub;
 
 public abstract class TemplateActivity extends Activity {
 
-	abstract protected int getHeaderLayoutId();
-
 	abstract protected int getContentLayoutId();
 
 	abstract protected int getFooterLayoutId();
@@ -20,11 +18,7 @@ public abstract class TemplateActivity extends Activity {
 	}
 
 	private void fillContent() {
-		ViewStub stub = (ViewStub) findViewById(R.id.tmpl_stub_header);
-		stub.setLayoutResource(getHeaderLayoutId());
-		stub.inflate();
-
-		stub = (ViewStub) findViewById(R.id.tmpl_stub_content);
+		ViewStub stub = (ViewStub) findViewById(R.id.tmpl_stub_content);
 		stub.setLayoutResource(getContentLayoutId());
 		stub.inflate();
 
