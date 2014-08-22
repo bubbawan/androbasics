@@ -1,19 +1,19 @@
 package org.freedom.androbasics;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.view.ViewStub;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 
-public abstract class TemplateActivity extends Activity {
+public abstract class TemplateActivity extends FragmentActivity {
 
 	private final class FooterAnimator implements Runnable {
 		private final View footer;
 
-		private FooterAnimator(View footer) {
+		private FooterAnimator(final View footer) {
 			this.footer = footer;
 		}
 
